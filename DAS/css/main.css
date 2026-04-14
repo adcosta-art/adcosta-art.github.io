@@ -1,0 +1,193 @@
+@media (min-width: 1200px) {
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header1 {
+        display: flex;
+        align-items: center;
+        color: white;
+        grid-column: 1;
+        background-color: #f7f7f7;
+        border-bottom: 5px solid #0A1948;
+    }
+
+    .Logo {
+        margin: 0 auto ;
+        width: 150px;
+        height: auto;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-rows: 100px auto;
+        height: 100vh;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/DESAFIO_ACCIONES_SOLIDARIAS/assets/3.jpg") center/cover no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        padding: 4.5rem;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    li {
+        list-style: circle;
+    }
+
+    li::marker {
+        color: #0A1948;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0A1948;
+    }
+
+    a:hover {
+        color: #FAC213;
+    }
+
+    aside {
+        grid-column: 1; 
+        padding: 0 1rem 1rem 1rem;
+        background-color: #f7f7f7;
+        overflow-y: auto;
+    }
+
+    .buscador-container {
+        margin: 1rem 0 0 0;
+        padding-bottom: 1rem;
+        position: sticky;
+        top: 0;
+        background-color: #f7f7f7;
+        z-index: 10;
+    }
+
+    #buscador {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #0A1948;
+        border-radius: 10px;
+        outline: none;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    #buscador:focus {
+        border-color: #FAC213;
+    }
+
+    aside > h3 {
+        margin-top: 1rem;
+        background-color: #FAC213;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        color: #0A1948;
+    }
+
+    aside::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    aside::-webkit-scrollbar-track {
+        background: #0A1948;
+    }
+
+    aside::-webkit-scrollbar-thumb {
+        background: #FAC213;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "titulo"
+        "main"
+        "aside";
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/DESAFIO_ACCIONES_SOLIDARIAS/assets/3.jpg") center/cover no-repeat;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        padding: 2rem;
+        min-height: 50vh;
+    }
+
+    aside {
+        grid-area: aside;
+        padding: 1rem;
+        background-color: #f7f7f7;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .Logo {
+        margin: 0.5rem 0 0.5rem 1rem;
+        width: 120px;
+        height: auto;
+    }
+
+    .header1 {
+        background-color: #f7f7f7;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .buscador-container {
+        margin: 0 0 1rem 0;
+    }
+
+    #buscador {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #0A1948;
+        border-radius: 10px;
+    }
+
+    aside > h3 {
+        margin-top: 1rem;
+        background-color: #FAC213;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        color: #0A1948;
+    }
+
+    li {
+        list-style: circle;
+    }
+
+    li::marker {
+        color: #0A1948;
+    }
+
+    a {
+        color: #0A1948;
+    }
+
+    a:hover {
+        color: #FAC213;
+    }
+}
